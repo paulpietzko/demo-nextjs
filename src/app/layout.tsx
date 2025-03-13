@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import "nano-analytics";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -28,6 +29,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         {children}
+        <nano-analytics projectKey="m87o8usg0k9iw" userId="12f4e0c6-00b8-4978-a85c-e7a1aa5cfddc" />
       </body>
     </html>
   );
